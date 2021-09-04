@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "name": "Hamburger",
+    "ingredients": [
+      {
+        "name": "Regular Bun",
+        "quantity": 2
+      },
+      {
+        "name": "100% Beef Patty",
+        "quantity": 1
+      },
+      {
+        "name": "Ketchup",
+        "quantity": 1
+      },
+      {
+        "name": "Pickle Slices",
+        "quantity": 1
+      },
+      {
+        "name": "Onions",
+        "quantity": 1
+      },
+      {
+        "name": "Mustard",
+        "quantity": 1
+      }
+    ],
+    "img": "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Hamburger.jpg?$Product_Desktop$"
+  },
+  {
+    "id": 2,
+    "name": "Cheeseburger",
+    "ingredients": [
+      {
+        "name": "Regular Bun",
+        "quantity": 2
+      },
+      {
+        "name": "100% Beef Patty",
+        "quantity": 1
+      },
+      {
+        "name": "Pasteurized Process American Cheese",
+        "quantity": 1
+      },
+      {
+        "name": "Ketchup",
+        "quantity": 1
+      },
+      {
+        "name": "Pickle Slices",
+        "quantity": 1
+      },
+      {
+        "name": "Onions",
+        "quantity": 1
+      },
+      {
+        "name": "Mustard",
+        "quantity": 1
+      }
+    ],
+    "img": "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Cheeseburger.jpg?$Product_Desktop$"
+  },
+  {
+    "id": 3,
+    "name": "McDouble",
+    "ingredients": [
+      {
+        "name": "Regular Bun",
+        "quantity": 2
+      },
+      {
+        "name": "100% Beef Patty",
+        "quantity": 2
+      },
+      {
+        "name": "Pasteurized Process American Cheese",
+        "quantity": 1
+      },
+      {
+        "name": "Ketchup",
+        "quantity": 1
+      },
+      {
+        "name": "Pickle Slices",
+        "quantity": 1
+      },
+      {
+        "name": "Onions",
+        "quantity": 1
+      },
+      {
+        "name": "Mustard",
+        "quantity": 1
+      }
+    ],
+    "img": "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-McDouble.jpg?$Product_Desktop$"
+  },
+  {
+    "id": 4,
+    "name": "Quarter Pounder with Cheese Bacon",
+    "ingredients": [
+      {
+        "name": "Quarter Pound Bun",
+        "quantity": 2
+      },
+      {
+        "name": "Quarter Pound 100% Beef Patty",
+        "quantity": 1
+      },
+      {
+        "name": "Pasteurized Process American Cheese",
+        "quantity": 2
+      },
+      {
+        "name": "Thick Cut Applewood Smoked Bacon",
+        "quantity": 1
+      },
+      {
+        "name": "Ketchup",
+        "quantity": 1
+      },
+      {
+        "name": "Pickle Slices",
+        "quantity": 1
+      },
+      {
+        "name": "Onions",
+        "quantity": 1
+      },
+      {
+        "name": "Mustard",
+        "quantity": 1
+      }
+    ],
+    "img": "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-qpc-bacon.jpg?$Product_Desktop$"
+  },
+  {
+    "id": 5,
+    "name": "Big Mac",
+    "ingredients": [
+      {
+        "name": "Big Mac Bun",
+        "quantity": 2
+      },
+      {
+        "name": "100% Beef Patty",
+        "quantity": 2
+      },
+      {
+        "name": "Shredded Lettuce",
+        "quantity": 1
+      },
+      {
+        "name": "Big Mac Sauce",
+        "quantity": 1
+      },
+      {
+        "name": "Pasteurized Process American Cheese",
+        "quantity": 1
+      },
+      {
+        "name": "Pickle Slices",
+        "quantity": 1
+      },
+      {
+        "name": "Onions",
+        "quantity": 1
+      }
+    ],
+    "img": "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Big-Mac.jpg?$Product_Desktop$"
+  },
+  {
+    "id": 6,
+    "name": "McChicken",
+    "ingredients": [
+      {
+        "name": "McChicken Patty",
+        "quantity": 1
+      },
+      {
+        "name": "Regular Bun",
+        "quantity": 2
+      },
+      {
+        "name": "Shredded Lettuce",
+        "quantity": 1
+      },
+      {
+        "name": "Mayonnaise",
+        "quantity": 1
+      }
+    ],
+    "img": "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-McChicken.jpg?$Product_Desktop$"
+  },
+  {
+    "id": 7,
+    "name": "Filet-O-Fish",
+    "ingredients": [
+      {
+        "name": "Fish Filet Patty",
+        "quantity": 1
+      },
+      {
+        "name": "Regular Bun",
+        "quantity": 2
+      },
+      {
+        "name": "Tartar Sauce",
+        "quantity": 1
+      },
+      {
+        "name": "Pasteurized Process American Cheese Half Slice",
+        "quantity": 1
+      }
+    ],
+    "img": "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Filet-O-Fish.png?$Product_Desktop$"
+  }
+]
