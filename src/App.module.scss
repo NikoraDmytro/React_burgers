@@ -1,0 +1,18 @@
+.burgersList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 2.5em;
+}
+
+.burger {
+  width: 15em;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h3 {
+    text-align: center;
+  }
+}
