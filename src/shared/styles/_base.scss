@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin flexCenter($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin setSize($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@function getFontWeight($name) {
+  @return map-get($fontWeights, $name);
+}

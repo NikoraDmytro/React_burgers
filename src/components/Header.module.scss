@@ -1,28 +1,29 @@
-@import "../shared/styles/mixin";
+@import "../shared/styles/base";
 
 .header {
   @include flexCenter;
   justify-content: space-between;
-  height: 5em;
+  height: 7em;
   padding: 0 7.5%;
-  box-shadow: 0 2px 7px 2px #fafafa;
+  box-shadow: 0 2px 5px 2px #fafafa;
   * {
     @include flexCenter;
   }
 }
 
 .logo {
-  width: 4em;
-  height: 4em;
-  margin-right: 1.5em;
+  @include setSize(4.5em);
 }
 
 .cart {
   position: relative;
-  justify-self: flex-end;
   img {
-    width: 2.5em;
-    height: 2.5em;
+    @include setSize(4em);
+  }
+  em {
+    text-align: center;
+    font-weight: getFontWeight("medium");
+    font-size: 1.25em;
   }
 }
 

@@ -24,14 +24,17 @@ export default function App() {
     <div>
       <Header />
       {burgers.length ? (
-        <ul className={styles.burgersList}>
-          {burgers.map((burger) => (
-            <li key={burger._id} className={styles.burger}>
-              <img src={burger.img} alt="Crush" />
-              <h3>{burger.name}</h3>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.mainContent}>
+          <h1 className={styles.title}>Burgers Menu</h1>
+          <ul className={styles.burgersList}>
+            {burgers.map((burger) => (
+              <li key={burger._id} className={styles.burger}>
+                <img src={burger.img} alt="Crush" />
+                <span className={styles.burgerName}>{burger.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : (
         <h1>Loading</h1>
       )}
