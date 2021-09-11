@@ -1,0 +1,22 @@
+@import "../../shared/styles/base";
+
+.burgersList {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+}
+
+.burger {
+  @include setSize(15em, 20em);
+  margin: 0 0 1em 1.5em;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.burgerName {
+  display: block;
+  margin-top: 1.25em;
+  font-size: 1.25em;
+}

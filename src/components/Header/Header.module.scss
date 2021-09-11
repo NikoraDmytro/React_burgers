@@ -1,4 +1,5 @@
-@import "../shared/styles/base";
+@import "../../shared/styles/base";
+@import "../../shared/styles/components";
 
 .header {
   @include flexCenter;
@@ -25,18 +26,4 @@
     font-weight: getFontWeight("medium");
     font-size: 1.25em;
   }
-}
-
-.badge {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  min-width: 1.75em;
-  height: 1.75em;
-  color: white;
-  padding: 0 0.25em;
-  font-size: 0.75em;
-  white-space: nowrap;
-  border-radius: 10px;
-  background-color: #dc004e;
 }

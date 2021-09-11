@@ -27,7 +27,7 @@ app.get("/", async (req, res) => {
   try {
     const burgers = await BurgersModel.find();
 
-    res.status(200).json(burgers);
+    setTimeout(() => res.status(200).json(burgers), 1000);
   } catch (err) {
     if (err.response) {
       res.status(err.response.status).json(err.response);
