@@ -1,17 +1,17 @@
 @import "../../shared/styles/base";
 
 .burgersList {
+  @include resetList;
   display: flex;
   flex-flow: row wrap;
-  list-style-type: none;
 }
 
 .burger {
   @include setSize(15em, 20em);
+  cursor: pointer;
   margin: 0 0 1em 1.5em;
   img {
-    width: 100%;
-    height: auto;
+    @include setSize(100%, auto);
   }
 }
 

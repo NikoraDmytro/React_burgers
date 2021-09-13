@@ -12,6 +12,12 @@
   height: $height;
 }
 
+@mixin resetList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 @function getFontWeight($name) {
   @return map-get($fontWeights, $name);
 }
