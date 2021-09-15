@@ -1,0 +1,16 @@
+@import "../../../shared/styles/base";
+
+.burgerImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.ingredientsList {
+  @include resetList;
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  li {
+    flex-basis: 50%;
+  }
+}

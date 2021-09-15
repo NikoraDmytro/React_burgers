@@ -7,15 +7,42 @@
   flex-direction: $direction;
 }
 
-@mixin setSize($width, $height: $width) {
+@mixin setSize($width, $height: $width, $radius: 0) {
   width: $width;
   height: $height;
+
+  @if ($radius != 0) {
+    border-radius: $radius;
+  }
 }
 
 @mixin resetList {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+@mixin setPosition($type, $position, $value1: 0, $value2: $value1) {
+  position: $type;
+  @if not index($positions, $position) {
+    @error "#{$position} is not a valid position. Expected one of #{$positions}.";
+  }
+  @if ($position == "topLeft") {
+    top: $value1;
+    left: $value2;
+  }
+  @if ($position == "topRight") {
+    top: $value1;
+    right: $value2;
+  }
+  @if ($position == "bottomLeft") {
+    bottom: $value1;
+    left: $value2;
+  }
+  @if ($position == "bottomRight") {
+    bottom: $value1;
+    right: $value2;
+  }
 }
 
 @function getFontWeight($name) {

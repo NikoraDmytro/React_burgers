@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BurgersListProps } from "../../shared/types/Props";
 import styles from "./Burgers.module.scss";
 import { BurgersLoader } from "./BurgerLoader";
-import { OrderModal } from "./../OrderModal/index";
+import { OrderModal } from "../Modals/OrderModal/index";
 import { Burger } from "../../shared/types/Burgers";
 
 const Loader = () => (

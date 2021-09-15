@@ -1,0 +1,51 @@
+@import "../../../shared/styles/base";
+
+$modalPadding: 2em;
+
+@keyframes popOut {
+  from {
+    top: -25%;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modalWrapper {
+  @include setSize(100%, 100%);
+  @include flexCenter;
+  @include setPosition(fixed, "topLeft");
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.modal {
+  @include setSize(60em, auto);
+  position: relative;
+  padding: $modalPadding;
+  border-radius: 12px;
+  max-width: 90%;
+  animation: popOut 0.25s;
+  background-color: #ffffff;
+}
+
+.closeModalButton {
+  @include setPosition(absolute, "topLeft", $modalPadding);
+  @include setSize(calc(1.5em + 1vw));
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2.5px solid #ebedf0;
+  background-color: transparent;
+  &:hover {
+    background-color: #ebedf0;
+  }
+  &:active {
+    $color: #757878;
+    background-color: $color;
+    border-color: $color;
+  }
+  img {
+    @include setSize(50%);
+  }
+}
