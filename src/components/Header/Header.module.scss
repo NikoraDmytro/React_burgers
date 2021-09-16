@@ -1,29 +1,29 @@
-@import "../../shared/styles/base";
-@import "../../shared/styles/components";
+@use "../../shared/styles/base";
+@use "../../shared/styles/components";
 
 .header {
-  @include flexCenter;
+  @include base.flexCenter;
   justify-content: space-between;
   height: 7em;
   padding: 0 7.5%;
   box-shadow: 0 2px 5px 2px #fafafa;
   * {
-    @include flexCenter;
+    @include base.flexCenter;
   }
 }
 
 .logo {
-  @include setSize(4.5em);
+  @include base.setSize(4.5em);
 }
 
 .cart {
   position: relative;
   img {
-    @include setSize(4em);
+    @include base.setSize(4em);
   }
   em {
     text-align: center;
-    font-weight: getFontWeight("medium");
+    font-weight: base.getFontWeight("medium");
     font-size: 1.25em;
   }
 }

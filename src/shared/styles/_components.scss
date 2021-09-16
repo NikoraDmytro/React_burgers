@@ -1,7 +1,7 @@
-@import "./base";
+@use "base";
 
 .badge {
-  @include setPosition(absolute, "topLeft", -10px);
+  @include base.setPosition(absolute, "topLeft", -10px);
   min-width: 1.75em;
   height: 1.75em;
   color: white;

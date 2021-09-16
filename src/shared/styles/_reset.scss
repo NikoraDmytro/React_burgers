@@ -1,0 +1,19 @@
+@use "base";
+
+@mixin resetInput {
+  &[type="number"] {
+    &,
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      @include base.prefix(appearance, textfield, webkit moz);
+    }
+  }
+  margin: 0;
+  outline: none;
+}
+
+@mixin resetList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}

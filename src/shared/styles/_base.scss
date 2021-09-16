@@ -1,4 +1,15 @@
-@import "variables";
+@use "variables";
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    @if not index(variables.$prefixes, $prefix) {
+      @error "#{$prefix} is not a valid prefix. Expected one of #{variables.$prefixes}.";
+    }
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
 
 @mixin flexCenter($direction: row) {
   display: flex;
@@ -16,16 +27,10 @@
   }
 }
 
-@mixin resetList {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
 @mixin setPosition($type, $position, $value1: 0, $value2: $value1) {
   position: $type;
-  @if not index($positions, $position) {
-    @error "#{$position} is not a valid position. Expected one of #{$positions}.";
+  @if not index(variables.$positions, $position) {
+    @error "#{$position} is not a valid position. Expected one of #{variables.$positions}.";
   }
   @if ($position == "topLeft") {
     top: $value1;
@@ -46,5 +51,5 @@
 }
 
 @function getFontWeight($name) {
-  @return map-get($fontWeights, $name);
+  @return map-get(variables.$fontWeights, $name);
 }

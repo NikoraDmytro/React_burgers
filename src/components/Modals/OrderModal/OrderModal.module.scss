@@ -1,4 +1,4 @@
-@import "../../../shared/styles/base";
+@use "../../../shared/styles/reset";
 
 .burgerImage {
   max-width: 100%;
@@ -6,11 +6,17 @@
 }
 
 .ingredientsList {
-  @include resetList;
+  @include reset.resetList;
   display: flex;
   flex: 1;
   flex-flow: row wrap;
   li {
     flex-basis: 50%;
+  }
+}
+
+.quantity {
+  input {
+    @include reset.resetInput;
   }
 }

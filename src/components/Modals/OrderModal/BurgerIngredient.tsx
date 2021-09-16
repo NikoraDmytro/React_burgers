@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./OrderModal.module.scss";
 import { Ingredient } from "../../../shared/types/Burgers";
 
 interface Props {
@@ -10,28 +11,27 @@ export const BurgerIngredient = ({ ingredient }: Props) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.valueAsNumber || "";
-
-    if (!newValue && newValue !== "") {
-      setQuantity(0);
-    }
-
     setQuantity(newValue);
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if (e.target.value === "") {
+    if (!e.target.value) {
       setQuantity(0);
     }
   };
 
   return (
     <li>
-      <input
-        type="number"
-        onBlur={handleBlur}
-        onChange={handleChange}
-        value={quantity}
-      />
+      <div className={styles.quantity}>
+        <button>-</button>
+        <input
+          type="number"
+          onBlur={handleBlur}
+          onChange={handleChange}
+          value={quantity}
+        />
+        <button>+</button>
+      </div>
       <span>{ingredient.name}</span>
     </li>
   );
