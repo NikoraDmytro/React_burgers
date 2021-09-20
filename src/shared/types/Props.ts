@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Burger } from "./Burgers";
+import { Burger, Ingredient } from "./Burgers";
 
 export type BurgersListProps = {
   burgers: Burger[];
@@ -13,4 +13,8 @@ export type BurgerModalProps = {
 export type ModalProps = {
   closeModal: () => void;
   children?: ReactNode;
+};
+
+export type BurgerIngredientProps = {
+  ingredient: Ingredient;
 };

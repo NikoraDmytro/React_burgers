@@ -1,22 +1,41 @@
 @use "../../../shared/styles/reset";
+@use "../../../shared/styles/base";
+@use "../../../shared/styles/variables";
+
+.modalContent {
+  @include base.setSize(80vw, 80vh);
+  max-width: 75em;
+  min-width: 50em;
+}
+
+.burgerDetails {
+  @include base.setSize(42.5%, 100%);
+  float: left;
+  padding: 2em;
+  &:first-of-type {
+    width: 57.5%;
+    border-right: 2px solid variables.$darkGray;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.title {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
 
 .burgerImage {
-  max-width: 100%;
-  height: auto;
+  margin: 3em 0 2em 0;
+  @include base.setSize(100%, auto);
+  display: flex;
+  justify-content: center;
+  img {
+    object-fit: contain;
+  }
 }
 
 .ingredientsList {
   @include reset.resetList;
-  display: flex;
-  flex: 1;
-  flex-flow: row wrap;
-  li {
-    flex-basis: 50%;
-  }
-}
-
-.quantity {
-  input {
-    @include reset.resetInput;
-  }
 }

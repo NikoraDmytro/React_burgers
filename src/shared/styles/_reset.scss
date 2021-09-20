@@ -2,14 +2,23 @@
 
 @mixin resetInput {
   &[type="number"] {
-    &,
-    ::-webkit-inner-spin-button,
-    ::-webkit-outer-spin-button {
-      @include base.prefix(appearance, textfield, webkit moz);
+    @include base.prefix(appearance, textfield, webkit moz);
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      @include base.prefix(appearance, none, webkit moz);
+      margin: 0;
     }
   }
-  margin: 0;
+  border: none;
   outline: none;
+}
+
+@mixin resetButton {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 @mixin resetList {

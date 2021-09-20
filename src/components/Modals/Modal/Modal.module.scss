@@ -1,6 +1,8 @@
 @use "../../../shared/styles/base";
+@use "../../../shared/styles/variables";
 
-$modalPadding: 2em;
+$buttonSize: calc(2em + 0.5vw);
+$buttonMargin: 1.5em;
 
 @keyframes popOut {
   from {
@@ -14,38 +16,34 @@ $modalPadding: 2em;
 }
 
 .modalWrapper {
-  @include base.setSize(100%, 100%);
+  @include base.setSize(100%);
   @include base.flexCenter;
   @include base.setPosition(fixed, "topLeft");
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(255, 200, 86, 0.9);
 }
 
 .modal {
-  @include base.setSize(60em, auto);
   position: relative;
-  padding: $modalPadding;
   border-radius: 12px;
-  max-width: 90%;
   animation: popOut 0.25s;
   background-color: #ffffff;
 }
 
 .closeModalButton {
-  @include base.setPosition(absolute, "topLeft", $modalPadding);
-  @include base.setSize(calc(1.5em + 1vw));
+  @include base.setPosition(absolute, "topLeft", $buttonMargin);
+  @include base.setSize($buttonSize);
   cursor: pointer;
   border-radius: 50%;
-  border: 2.5px solid #ebedf0;
+  border: 2.5px solid variables.$lightGray;
   background-color: transparent;
   &:hover {
-    background-color: #ebedf0;
+    background-color: variables.$lightGray;
   }
   &:active {
-    $color: #757878;
-    background-color: $color;
-    border-color: $color;
+    background-color: variables.$darkGray;
+    border-color: variables.$darkGray;
   }
   img {
-    @include base.setSize(50%);
+    @include base.setSize(60%);
   }
 }

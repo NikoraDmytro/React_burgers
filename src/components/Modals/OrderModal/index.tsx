@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./OrderModal.module.scss";
 import { Burger } from "../../../shared/types/Burgers";
-import { BurgerIngredient } from "./BurgerIngredient";
+import { BurgerIngredient } from "./components/BurgerIngredient";
 import { Modal } from "../Modal";
 
 type Props = {
@@ -14,13 +14,24 @@ export const OrderModal = ({ burger, closeModal }: Props) => {
 
   return (
     <Modal closeModal={closeModal}>
-      <img className={styles.burgerImage} src={burger.img} alt="Crash" />
-      <h1>{burger.name}</h1>
-      <ul className={styles.ingredientsList}>
-        {burger.ingredients.map((ingredient) => (
-          <BurgerIngredient ingredient={ingredient} key={ingredient._id} />
-        ))}
-      </ul>
+      <div className={styles.modalContent}>
+        <div className={styles.burgerDetails}>
+          <h2 className={styles.title}>
+            Adjust ingredients of {burger.name.toUpperCase()}
+          </h2>
+          <ul className={styles.ingredientsList}>
+            {burger.ingredients.map((ingredient) => (
+              <BurgerIngredient ingredient={ingredient} key={ingredient._id} />
+            ))}
+          </ul>
+        </div>
+        <div className={styles.burgerDetails}>
+          <div className={styles.burgerImage}>
+            <img src={burger.img} alt="Crash" width={300} />
+          </div>
+          <h2>{burger.name.toUpperCase()}</h2>
+        </div>
+      </div>
     </Modal>
   );
 };

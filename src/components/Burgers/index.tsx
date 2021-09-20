@@ -32,7 +32,9 @@ export const BurgersList = ({ burgers }: BurgersListProps) => {
             onClick={() => handleClick(burger)}
           >
             <img src={burger.img} alt="Crash" />
-            <span className={styles.burgerName}>{burger.name}</span>
+            <span className={styles.burgerName}>
+              {burger.name.toUpperCase()}
+            </span>
           </li>
         ))
       ) : (

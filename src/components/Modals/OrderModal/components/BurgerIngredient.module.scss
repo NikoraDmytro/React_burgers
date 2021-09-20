@@ -1,0 +1,49 @@
+@use "../../../../shared/styles/base";
+@use "../../../../shared/styles/variables";
+@use "../../../../shared/styles/reset";
+
+.ingredient {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1em;
+  margin-top: 1.25em;
+  border-radius: 10px;
+  border: 1.5px solid variables.$gray;
+}
+
+.modified {
+  border-color: variables.$darkGreen;
+  font-weight: base.getFontWeight(bold);
+}
+
+.empty {
+  border-color: variables.$lightGray;
+  font-weight: base.getFontWeight(light);
+  strong {
+    font-weight: base.getFontWeight(light);
+  }
+}
+
+.quantity {
+  strong {
+    margin-right: 1.5em;
+  }
+  button {
+    @include reset.resetButton;
+    @include base.setSize(1.25em);
+    cursor: pointer;
+    font-size: 1.25em;
+    border-radius: 12px;
+    margin-right: 0.25em;
+    color: variables.$darkGreen;
+    font-weight: base.getFontWeight(medium);
+    background-color: variables.$lightGreen;
+    &:active {
+      color: #ffffff;
+      background-color: variables.$darkGreen;
+    }
+  }
+}
