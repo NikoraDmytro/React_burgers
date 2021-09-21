@@ -34,8 +34,8 @@ $buttonMargin: 1.5em;
   @include base.setSize($buttonSize);
   cursor: pointer;
   border-radius: 50%;
-  border: 2.5px solid variables.$lightGray;
   background-color: transparent;
+  border: 2.5px solid variables.$lightGray;
   &:hover {
     background-color: variables.$lightGray;
   }

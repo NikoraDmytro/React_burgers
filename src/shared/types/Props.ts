@@ -15,6 +15,10 @@ export type ModalProps = {
   children?: ReactNode;
 };
 
-export type BurgerIngredientProps = {
+export type IngredientsListProps = {
+  ingredients: Ingredient[];
+};
+
+export type IngredientProps = {
   ingredient: Ingredient;
 };

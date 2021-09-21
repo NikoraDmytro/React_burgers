@@ -2,10 +2,12 @@
 @use "../../../../shared/styles/variables";
 @use "../../../../shared/styles/reset";
 
+.ingredientsList {
+  @include reset.resetList;
+}
+
 .ingredient {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include base.flexCenter;
   justify-content: space-between;
 
   padding: 1em;
@@ -15,14 +17,13 @@
 }
 
 .modified {
-  border-color: variables.$darkGreen;
+  border-color: variables.$green;
   font-weight: base.getFontWeight(bold);
 }
 
 .empty {
   border-color: variables.$lightGray;
-  font-weight: base.getFontWeight(light);
-  strong {
+  * {
     font-weight: base.getFontWeight(light);
   }
 }
@@ -38,12 +39,12 @@
     font-size: 1.25em;
     border-radius: 12px;
     margin-right: 0.25em;
-    color: variables.$darkGreen;
+    color: variables.$green;
     font-weight: base.getFontWeight(medium);
     background-color: variables.$lightGreen;
     &:active {
       color: #ffffff;
-      background-color: variables.$darkGreen;
+      background-color: variables.$green;
     }
   }
 }

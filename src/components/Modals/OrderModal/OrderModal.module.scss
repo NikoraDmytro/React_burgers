@@ -6,36 +6,53 @@
   @include base.setSize(80vw, 80vh);
   max-width: 75em;
   min-width: 50em;
-}
-
-.burgerDetails {
-  @include base.setSize(42.5%, 100%);
-  float: left;
-  padding: 2em;
-  &:first-of-type {
-    width: 57.5%;
-    border-right: 2px solid variables.$darkGray;
+  > div {
+    @include base.setSize(42.5%, 100%);
+    float: left;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    &::after {
+      clear: both;
+    }
   }
-  &::after {
-    clear: both;
+  .ingredientsDetails {
+    width: 57.5%;
+    overflow-y: scroll;
+    border-right: 2px solid variables.$darkGray;
   }
 }
 
 .title {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin: 1.5em 0;
+}
+
+.burgerName {
+  text-align: center;
 }
 
 .burgerImage {
-  margin: 3em 0 2em 0;
   @include base.setSize(100%, auto);
   display: flex;
+  margin: 3em 0 2em 0;
   justify-content: center;
   img {
     object-fit: contain;
   }
 }
 
-.ingredientsList {
-  @include reset.resetList;
+.addToOrder {
+  @include reset.resetButton;
+  width: 100%;
+  cursor: pointer;
+  color: #ffffff;
+  margin-top: auto;
+  font-size: 1.125em;
+  border-radius: 100px;
+  padding: 0.875em 1.5em;
+  background-color: variables.$green;
+  font-weight: base.getFontWeight(bold);
+  &:hover {
+    background-color: variables.$darkGreen;
+  }
 }
