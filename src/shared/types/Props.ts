@@ -5,8 +5,8 @@ export type BurgersListProps = {
   burgers: Burger[];
 };
 
-export type BurgerModalProps = {
-  burger: Burger | null;
+export type OrderModalProps = {
+  burger: Burger;
   closeModal: () => void;
 };
 

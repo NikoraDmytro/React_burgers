@@ -23,7 +23,9 @@ export const BurgersList = ({ burgers }: BurgersListProps) => {
 
   return (
     <ul className={styles.burgersList}>
-      <OrderModal burger={selectedBurger} closeModal={closeModal} />
+      {selectedBurger ? (
+        <OrderModal burger={selectedBurger} closeModal={closeModal} />
+      ) : null}
       {burgers.length ? (
         burgers.map((burger) => (
           <li

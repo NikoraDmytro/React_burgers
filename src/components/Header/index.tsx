@@ -1,8 +1,9 @@
 import React from "react";
+import { useTypedSelector } from "../../store/hooks";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
-  const totalCount = 0;
+  const totalCount = useTypedSelector((state) => state.cart.quantity);
 
   return (
     <header className={styles.header}>

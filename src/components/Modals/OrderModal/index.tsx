@@ -1,18 +1,18 @@
 import React from "react";
 import styles from "./OrderModal.module.scss";
-import { Burger } from "../../../shared/types/Burgers";
 import { IngredientsList } from "./components/IngredientsList";
 import { Modal } from "../Modal";
+import { useTypedDispatch } from "../../../store/hooks";
+import { OrderModalProps } from "../../../shared/types/Props";
+import { addToCart } from "../../../store/reducers/cartSlice";
 
-type Props = {
-  burger: Burger | null;
-  closeModal: () => void;
-};
+export const OrderModal = ({ burger, closeModal }: OrderModalProps) => {
+  const dispatch = useTypedDispatch();
 
-export const OrderModal = ({ burger, closeModal }: Props) => {
-  if (!burger) return null;
-
-  const handleClick = () => closeModal();
+  const handleClick = () => {
+    dispatch(addToCart(burger));
+    closeModal();
+  };
 
   return (
     <Modal closeModal={closeModal}>
