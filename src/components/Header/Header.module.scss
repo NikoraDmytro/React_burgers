@@ -19,7 +19,7 @@
 .cart {
   position: relative;
   img {
-    @include base.setSize(4em);
+    @include base.setSize(3em);
   }
   em {
     text-align: center;

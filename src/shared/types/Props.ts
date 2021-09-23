@@ -15,10 +15,9 @@ export type ModalProps = {
   children?: ReactNode;
 };
 
-export type IngredientsListProps = {
-  ingredients: Ingredient[];
-};
-
-export type IngredientProps = {
+export type BurgerIngredientsProps = {
   ingredient: Ingredient;
+  initialQuantity: number;
+  changeQuantity: (quantity: number) => void;
+  modifier: string;
 };

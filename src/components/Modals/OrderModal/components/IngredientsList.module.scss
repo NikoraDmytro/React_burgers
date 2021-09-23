@@ -16,7 +16,7 @@
   border: 1.5px solid variables.$gray;
 }
 
-.modified {
+.changed {
   border-color: variables.$green;
   font-weight: base.getFontWeight(bold);
 }
