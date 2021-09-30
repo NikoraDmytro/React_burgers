@@ -1,23 +1,36 @@
 @use "../../shared/styles/base";
 @use "../../shared/styles/reset";
+@use "../../shared/styles/variables";
 
 .burgersList {
   @include reset.resetList;
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22.5em, 1fr));
+  gap: 1.5em;
 }
 
 .burger {
-  @include base.setSize(15em, 20em);
+  width: 100%;
+  display: flex;
+  flex-flow: row;
   cursor: pointer;
-  margin: 0 0 1em 1.5em;
-  img {
-    @include base.setSize(100%, auto);
+  border-radius: 8px;
+  padding: 0.75em 0.25em;
+  transition: transform 0.5s;
+  border: 1.5px solid variables.$gray;
+  &:hover {
+    transform: translateY(-5px);
   }
 }
 
-.burgerName {
-  display: block;
-  margin-top: 1.25em;
-  font-size: 1.25em;
+.burgerImage {
+  @include base.setSize(7.5em, auto);
+  margin-top: 0.25em;
+}
+
+.burgerInfo {
+  width: 100%;
+  text-align: start;
+  font-size: 1.125em;
+  margin-left: 0.5em;
 }

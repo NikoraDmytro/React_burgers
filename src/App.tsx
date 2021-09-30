@@ -25,7 +25,7 @@ export default function App() {
     <div>
       <Header />
       <div className={styles.mainContent}>
-        <h1 className={styles.title}>Burgers Menu</h1>
+        <h1 className={styles.title}>Burgers menu</h1>
         <BurgersList burgers={burgers} />
       </div>
     </div>

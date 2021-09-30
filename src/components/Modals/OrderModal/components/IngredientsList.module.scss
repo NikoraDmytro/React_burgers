@@ -8,12 +8,13 @@
 
 .ingredient {
   @include base.flexCenter;
-  justify-content: space-between;
-
   padding: 1em;
   margin-top: 1.25em;
   border-radius: 10px;
   border: 1.5px solid variables.$gray;
+  span {
+    width: 100%;
+  }
 }
 
 .changed {
@@ -29,6 +30,7 @@
 }
 
 .quantity {
+  white-space: nowrap;
   strong {
     margin-right: 1.5em;
   }
