@@ -1,33 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import styles from "./App.module.scss";
 
 import { Header } from "./components/Header/index";
-import { BurgersList } from "./components/Burgers/index";
-import { Burger } from "./shared/types/Burgers";
-
-const address = "http://localhost:5000";
+import { ProductsPage } from "./pages/Products/index";
+import { OrdersPage } from "./pages/index";
 
 export default function App() {
-  const [burgers, setBurgers] = useState<Burger[]>([]);
-
-  useEffect(() => {
-    async function fetchBurgers() {
-      const response = await fetch(address);
-      const burgers: Burger[] = await response.json();
-
-      setBurgers(burgers);
-    }
-
-    fetchBurgers();
-  }, []);
-
   return (
-    <div>
-      <Header />
-      <div className={styles.mainContent}>
-        <h1 className={styles.title}>Burgers menu</h1>
-        <BurgersList burgers={burgers} />
+    <Router>
+      <div>
+        <Header />
+        <div className={styles.mainContent}>
+          <Switch>
+            <Route path="/" exact>
+              <ProductsPage />
+            </Route>
+            <Route path="/orders">
+              <OrdersPage />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }

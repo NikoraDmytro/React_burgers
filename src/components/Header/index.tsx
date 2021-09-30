@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useTypedSelector } from "../../store/hooks";
 import styles from "./Header.module.scss";
 
@@ -12,12 +13,12 @@ export const Header = () => {
       </div>
       <div className={styles.cart}>
         {totalCount ? (
-          <>
+          <Link to="./orders">
             <img src="./images/shopping-cart.svg" alt="Cart" />
             <span className={styles.badge}>
               {totalCount > 99 ? "99+" : totalCount}
             </span>
-          </>
+          </Link>
         ) : (
           <em>
             No burgers
