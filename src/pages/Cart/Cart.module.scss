@@ -1,0 +1,22 @@
+@use "../../shared/styles/reset";
+@use "../../shared/styles/base";
+
+.cart {
+  ul {
+    @include reset.resetList;
+  }
+}
+
+.goBack {
+  @include base.setPosition(absolute, "topLeft", 1em);
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  span {
+    font-size: 1.25em;
+  }
+}
+
+.title {
+  margin: 1.5em 0;
+}

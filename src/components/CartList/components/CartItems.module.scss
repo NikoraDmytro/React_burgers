@@ -1,0 +1,14 @@
+@use "../../../shared/styles/variables";
+@use "../../../shared/styles/base";
+
+.cartItem {
+  margin: 1em;
+  padding: 1em;
+  border: 1.5px solid variables.$lightGray;
+}
+
+.itemIngredients {
+  li {
+    margin: 0.5em;
+  }
+}

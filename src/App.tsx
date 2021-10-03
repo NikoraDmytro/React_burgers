@@ -5,7 +5,7 @@ import styles from "./App.module.scss";
 
 import { Header } from "./components/Header/index";
 import { ProductsPage } from "./pages/Products/index";
-import { OrdersPage } from "./pages/index";
+import { CartPage } from "./pages/Cart/index";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
               <ProductsPage />
             </Route>
             <Route path="/orders">
-              <OrdersPage />
+              <CartPage />
             </Route>
           </Switch>
         </div>
