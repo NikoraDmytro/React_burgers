@@ -4,7 +4,7 @@ import { useTypedSelector } from "../../store/hooks";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
-  const totalCount = useTypedSelector((state) => state.cart.quantity);
+  const totalCount = useTypedSelector((state) => state.cart.totalQuantity);
 
   return (
     <header className={styles.header}>

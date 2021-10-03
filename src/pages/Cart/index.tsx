@@ -5,7 +5,7 @@ import { CartList } from "./../../components/CartList/index";
 import { useTypedSelector } from "../../store/hooks";
 
 export const CartPage = () => {
-  const totalQuantity = useTypedSelector((state) => state.cart.quantity);
+  const totalQuantity = useTypedSelector((state) => state.cart.totalQuantity);
 
   return (
     <div className={styles.cart}>
@@ -13,10 +13,10 @@ export const CartPage = () => {
         <span>{"\u2190"}</span> Go back
       </Link>
       <h1 className={styles.title}>Your order</h1>
+      <CartList />
       <button className={styles.makeOrderButton}>
         Order products ({totalQuantity})
       </button>
-      <CartList />
     </div>
   );
 };

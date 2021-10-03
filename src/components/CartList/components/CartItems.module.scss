@@ -1,10 +1,17 @@
 @use "../../../shared/styles/variables";
 @use "../../../shared/styles/base";
+@use "../../../shared/styles/components";
 
 .cartItem {
   margin: 1em;
   padding: 1em;
   border: 1.5px solid variables.$lightGray;
+  button {
+    @extend %changeQuantityButton;
+    @include base.setSize(1.25em);
+    font-size: 1.25em;
+    margin-right: 0.25em;
+  }
 }
 
 .itemIngredients {

@@ -7,8 +7,8 @@ export const CartList = () => {
 
   return (
     <ul>
-      {Object.entries(cart.burgers).map(([id, item]) => {
-        return <CartItem key={id} item={item} />;
+      {Object.entries(cart.products).map(([id, item]) => {
+        return <CartItem key={id} item={item} id={id} />;
       })}
     </ul>
   );
