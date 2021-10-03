@@ -1,4 +1,6 @@
 @use "base";
+@use "variables";
+@use "reset";
 
 .badge {
   @include base.setPosition(absolute, "topLeft", -10px);
@@ -10,4 +12,30 @@
   white-space: nowrap;
   border-radius: 10px;
   background-color: #dc004e;
+}
+
+%longBigButton {
+  @include reset.resetButton;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 0.875em 1.5em;
+  background-color: variables.$green;
+  font-weight: base.getFontWeight(bold);
+  &:hover {
+    background-color: variables.$darkGreen;
+  }
+}
+
+%changeQuantityButton {
+  @include reset.resetButton;
+  cursor: pointer;
+  border-radius: 40%;
+  color: variables.$green;
+  font-weight: base.getFontWeight(medium);
+  background-color: variables.$lightGreen;
+  &:active {
+    color: #ffffff;
+    background-color: variables.$green;
+  }
 }

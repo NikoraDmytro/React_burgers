@@ -1,6 +1,6 @@
-@use "../../../shared/styles/reset";
 @use "../../../shared/styles/base";
 @use "../../../shared/styles/variables";
+@use "../../../shared/styles/components";
 
 .modalContent {
   @include base.setSize(80vw, 80vh);
@@ -42,17 +42,8 @@
 }
 
 .addToOrder {
-  @include reset.resetButton;
+  @extend %longBigButton;
   width: 100%;
-  cursor: pointer;
-  color: #ffffff;
   margin-top: auto;
   font-size: 1.125em;
-  border-radius: 100px;
-  padding: 0.875em 1.5em;
-  background-color: variables.$green;
-  font-weight: base.getFontWeight(bold);
-  &:hover {
-    background-color: variables.$darkGreen;
-  }
 }

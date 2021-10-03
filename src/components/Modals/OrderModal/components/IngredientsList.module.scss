@@ -1,6 +1,7 @@
 @use "../../../../shared/styles/base";
 @use "../../../../shared/styles/variables";
 @use "../../../../shared/styles/reset";
+@use "../../../../shared/styles/components";
 
 .ingredientsList {
   @include reset.resetList;
@@ -35,18 +36,9 @@
     margin-right: 1.5em;
   }
   button {
-    @include reset.resetButton;
+    @extend %changeQuantityButton;
     @include base.setSize(1.25em);
-    cursor: pointer;
     font-size: 1.25em;
-    border-radius: 12px;
     margin-right: 0.25em;
-    color: variables.$green;
-    font-weight: base.getFontWeight(medium);
-    background-color: variables.$lightGreen;
-    &:active {
-      color: #ffffff;
-      background-color: variables.$green;
-    }
   }
 }

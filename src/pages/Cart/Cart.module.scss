@@ -1,5 +1,6 @@
 @use "../../shared/styles/reset";
 @use "../../shared/styles/base";
+@use "../../shared/styles/components";
 
 .cart {
   ul {
@@ -19,4 +20,10 @@
 
 .title {
   margin: 1.5em 0;
+}
+
+.makeOrderButton {
+  @extend %longBigButton;
+  font-size: 1.25em;
+  width: 25em;
 }
