@@ -4,10 +4,10 @@ import { IngredientsList } from "./components/IngredientsList";
 import { Modal } from "../Modal";
 import { useTypedDispatch } from "../../../store/hooks";
 import { OrderModalProps } from "../../../shared/types/Props";
-import { addToCart } from "../../../store/reducers/cartSlice";
+import { addToCart, editOrder } from "../../../store/reducers/cartSlice";
 import { OrderProvider } from "./context";
 
-export const OrderModal = ({ burger, closeModal }: OrderModalProps) => {
+export const OrderModal = ({ burger, closeModal, id }: OrderModalProps) => {
   const initialValue = burger.ingredients;
   const [ingredients, setIngredients] = useState(initialValue);
 
@@ -24,7 +24,11 @@ export const OrderModal = ({ burger, closeModal }: OrderModalProps) => {
   };
 
   const handleClick = () => {
-    dispatch(addToCart({ ...burger, ingredients }));
+    if (id) {
+      dispatch(editOrder({ ...burger, ingredients }, id));
+    } else {
+      dispatch(addToCart({ ...burger, ingredients }));
+    }
     closeModal();
   };
 

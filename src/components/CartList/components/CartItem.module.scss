@@ -19,3 +19,11 @@
     margin: 0.5em;
   }
 }
+
+.editOrder {
+  width: 5em;
+  cursor: pointer;
+  display: inline-block;
+  color: variables.$green;
+  font-weight: base.getFontWeight(medium);
+}

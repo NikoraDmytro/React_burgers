@@ -1,8 +1,8 @@
-import { Product } from "../../shared/types/Products";
+import { UserOrder } from "../../shared/types/Cart";
 
 export type CartState = {
   totalQuantity: number;
-  products: {
-    [id: string]: Product;
+  burgers: {
+    [id: string]: UserOrder;
   };
 };

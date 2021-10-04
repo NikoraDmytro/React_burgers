@@ -1,6 +1,6 @@
 import { Burger } from "./Burgers";
 
-export type Product = {
+export type UserOrder = {
   quantity: number;
-  product: Burger;
+  burger: Burger;
 };
