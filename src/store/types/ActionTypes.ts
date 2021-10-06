@@ -1,11 +1,11 @@
 import { PayloadAction } from "@reduxjs/toolkit";
 import { Burger } from "../../shared/types/Burgers";
 
-export type addToCartAction = PayloadAction<Burger>;
-export type removeFromCartAction = PayloadAction<string>;
-export type addOneAction = PayloadAction<string>;
-export type removeOneAction = PayloadAction<string>;
-export type EditOrderAction = PayloadAction<{
+export type addToCartActionType = PayloadAction<Burger>;
+export type removeFromCartActionType = PayloadAction<string>;
+export type addOneActionType = PayloadAction<string>;
+export type removeOneActionType = PayloadAction<string>;
+export type EditOrderActionType = PayloadAction<{
   editedBurger: Burger;
   id: string;
 }>;

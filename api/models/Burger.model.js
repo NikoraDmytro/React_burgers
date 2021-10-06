@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const BurgerSchema = new mongoose.Schema({
+export const BurgerSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,

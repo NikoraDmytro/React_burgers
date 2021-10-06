@@ -4,6 +4,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import { BurgersModel } from "./models/Burger.model.js";
+import { OrdersModel } from "./models/Order.model.js";
+
+import { parseError } from "./functions/parseError.js";
 
 dotenv.config();
 
@@ -29,13 +32,24 @@ app.get("/", async (req, res) => {
 
     setTimeout(() => res.status(200).json(burgers), 1000);
   } catch (err) {
-    if (err.response) {
-      res.status(err.response.status).json(err.response);
-    } else if (err.request) {
-      res.status(500).json(err.request);
-    } else {
-      res.status(500).json(err.message);
-    }
+    const { status, error } = parseError(err);
+    res.status(status).json(error);
+  }
+});
+
+app.post("/order", async (req, res) => {
+  try {
+    const order = new OrdersModel({
+      _id: new mongoose.Types.ObjectId(),
+      date: new Date(),
+      order: req.body,
+    });
+
+    const result = await order.save();
+    res.status(200).json(result);
+  } catch (err) {
+    const { status, error } = parseError(err);
+    res.status(status).json(error);
   }
 });
 
